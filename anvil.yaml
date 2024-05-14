@@ -7,7 +7,7 @@ services:
 startup: {type: form, module: Homepage}
 package_name: News_App
 allow_embedding: false
-name: Database-backed app
+name: ZorbaPOS
 runtime_options:
   version: 2
   client_version: '3'
@@ -35,13 +35,7 @@ db_schema:
     - name: content
       admin_ui: {width: 200}
       type: string
-    - name: image
-      admin_ui: {width: 200}
-      type: media
     - name: created
-      admin_ui: {width: 200}
-      type: datetime
-    - name: updated
       admin_ui: {width: 200}
       type: datetime
     - name: category
