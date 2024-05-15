@@ -29,17 +29,44 @@ db_schema:
     client: search
     server: full
     columns:
-    - name: title
-      admin_ui: {width: 200}
-      type: string
-    - name: content
-      admin_ui: {width: 200}
-      type: string
-    - name: created
+    - name: datetime
       admin_ui: {width: 200}
       type: datetime
-    - name: category
+    - name: id
       admin_ui: {width: 200}
-      type: link_single
-      target: categories
+      type: number
+    - name: item
+      admin_ui: {width: 200}
+      type: string
+    - name: item_done
+      admin_ui: {width: 200}
+      type: bool
+    - name: item_extra
+      admin_ui: {width: 200}
+      type: string
+    - name: table_id
+      admin_ui: {width: 200}
+      type: number
+  drinks:
+    title: Drinks
+    client: none
+    server: full
+    columns:
+    - name: item
+      admin_ui: {width: 200}
+      type: string
+    - name: price
+      admin_ui: {width: 200}
+      type: number
+  food:
+    title: Food
+    client: none
+    server: full
+    columns:
+    - name: item
+      admin_ui: {width: 200}
+      type: string
+    - name: price
+      admin_ui: {width: 200}
+      type: number
 renamed: true
