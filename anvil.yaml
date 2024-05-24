@@ -5,7 +5,7 @@ services:
   client_config: {}
   server_config: {}
 startup: {type: form, module: Homepage}
-package_name: News_App
+package_name: ZorbaPos
 allow_embedding: false
 name: ZorbaPOS
 runtime_options:
@@ -16,6 +16,29 @@ runtime_options:
   server_spec_disabled: {requirements: '', base: python310-minimal}
 startup_form: null
 db_schema:
+  entries:
+    title: Entries
+    client: search
+    server: full
+    columns:
+    - name: id
+      admin_ui: {width: 200}
+      type: number
+    - name: table_id
+      admin_ui: {width: 200}
+      type: number
+    - name: datetime
+      admin_ui: {width: 200}
+      type: datetime
+    - name: item
+      admin_ui: {width: 200}
+      type: string
+    - name: item_extra
+      admin_ui: {width: 200}
+      type: string
+    - name: item_done
+      admin_ui: {width: 200}
+      type: bool
   categories:
     title: Categories
     client: search
@@ -24,31 +47,8 @@ db_schema:
     - name: name
       admin_ui: {width: 200}
       type: string
-  entries:
-    title: Entries
-    client: search
-    server: full
-    columns:
-    - name: datetime
-      admin_ui: {width: 200}
-      type: datetime
-    - name: id
-      admin_ui: {width: 200}
-      type: number
-    - name: item
-      admin_ui: {width: 200}
-      type: string
-    - name: item_done
-      admin_ui: {width: 200}
-      type: bool
-    - name: item_extra
-      admin_ui: {width: 200}
-      type: string
-    - name: table_id
-      admin_ui: {width: 200}
-      type: number
-  drinks:
-    title: Drinks
+  food:
+    title: Food
     client: none
     server: full
     columns:
@@ -58,8 +58,8 @@ db_schema:
     - name: price
       admin_ui: {width: 200}
       type: number
-  food:
-    title: Food
+  drinks:
+    title: Drinks
     client: none
     server: full
     columns:
